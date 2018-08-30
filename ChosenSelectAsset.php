@@ -12,21 +12,20 @@ class ChosenSelectAsset extends AssetBundle
     /**
      * @var string the directory that contains the source asset files for this asset bundle
      */
-    public $sourcePath = '@bower/drmonty-chosen';
+    public $sourcePath = '@vendor/harvesthq/chosen';
 
     /**
      * @var array list of JavaScript files that this bundle contains
      */
     public $js = [
-        'js/chosen.jquery.js',
-        'js/chosen.proto.js',
+        'chosen.jquery.min.js',
     ];
 
     /**
      * @var array list of CSS files that this bundle contains
      */
     public $css = [
-        'css/chosen.css',
+        'chosen.min.css',
     ];
 
     /**
