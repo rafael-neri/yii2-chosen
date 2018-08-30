@@ -15,7 +15,7 @@ Installation
 Via Composer (Recommended)
 
 ```sh
-composer require ext4yii2/chosen
+composer require ext4yii2/chosen "~1.0"
 ```
 
 or add manually in require section of your compose.json
