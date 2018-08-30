@@ -1,6 +1,7 @@
 Chosen Select Widget for Yii 2
 =========
 Chosen Select Widget based on Chosen jQuery plugin [chosen](http://harvesthq.github.io/chosen).
+
 Fork from [yii2-chosen-select](https://github.com/yii2mod/yii2-chosen-select)
 
 
@@ -11,21 +12,18 @@ Fork from [yii2-chosen-select](https://github.com/yii2mod/yii2-chosen-select)
 Installation
 ------------
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/). 
-
-Either run
+Via Composer (Recommended)
 
 ```sh
 composer require ext4yii2/chosen
 ```
 
-or add
+or add manually in require section of your compose.json
 
 ```json
 "ext4yii2/chosen": "~1.0"
 ```
 
-to the require section of your composer.json.
 
 Usage
 ------------
@@ -33,7 +31,8 @@ Usage
 1) Usage with ActiveForm and model
 
 ```php
-echo $form->field($model, 'subject')->widget(\ext4yii2\chosen\ChosenSelect::class, [
+use \ext4yii2\chosen\ChosenSelect;
+echo $form->field($model, 'subject')->widget(ChosenSelect::class, [
     'items' => [
         'first' => 'First',
         'second' => 'Second'
@@ -44,15 +43,39 @@ echo $form->field($model, 'subject')->widget(\ext4yii2\chosen\ChosenSelect::clas
 2) Usage without a model
 
 ```php
-echo \ext4yii2\chosen\ChosenSelect::widget([
+use \ext4yii2\chosen\ChosenSelect;
+echo ChosenSelect::widget([
      'name'  => 'select',
-     'items' => BooleanEnum::listData(),
-     'options' => [
-         'width' => '95%'
-     ]
+     'items' => [
+        'first' => 'First',
+        'second' => 'Second'
+     ],
  ]);
 ```
 
-Select Options 
+3) Using Options and WidgetOptions
+
+```php
+use \ext4yii2\chosen\ChosenSelect;
+echo ChosenSelect::widget([
+     'name'  => 'select',
+     'items' => [
+        'first' => 'First',
+        'second' => 'Second'
+     ],
+     'options' => [
+         'prompt' => 'Select Option ...',
+     ],
+     'pluginOptions' => [
+         'disable_search' => true,
+     ],
+ ]);
+```
+
+Options
 ----------------
-You can find them on the [options page](http://harvesthq.github.io/chosen/options.html)
+Visit Yii2 Docs for [more options](https://www.yiiframework.com/doc/api/2.0/yii-helpers-basehtml#dropDownList()-detail).
+
+Plugin Options 
+----------------
+Visit Chosen Docs for more [Plugin Options](http://harvesthq.github.io/chosen/options.html).
