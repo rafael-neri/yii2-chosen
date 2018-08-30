@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2ext\chosen;
+namespace ext4yii2\chosen;
 
 use yii\helpers\Html;
 use yii\helpers\Json;

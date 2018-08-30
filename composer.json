@@ -1,5 +1,5 @@
 {
-    "name": "yii2ext/chosen",
+    "name": "ext4yii2/chosen",
     "description": "Chosen Select Widget based on Chosen jQuery plugin",
     "type": "yii2-extension",
     "keywords": [
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "yii2ext\\chosen\\": ""
+            "ext4yii2\\chosen\\": ""
         }
     },
     "repositories": [
