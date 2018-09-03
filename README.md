@@ -2,7 +2,6 @@ Chosen Select Widget for Yii 2
 =========
 Chosen Select Widget based on Chosen jQuery plugin [chosen](http://harvesthq.github.io/chosen).
 
-Fork from [yii2-chosen-select](https://github.com/yii2mod/yii2-chosen-select)
 
 
 [![Latest Stable Version](https://poser.pugx.org/ext4yii2/chosen/v/stable?format=flat-square)](https://packagist.org/packages/ext4yii2/chosen)
@@ -32,7 +31,7 @@ Usage
 
 ```php
 use \ext4yii2\chosen\ChosenSelect;
-echo $form->field($model, 'subject')->widget(ChosenSelect::class, [
+echo $form->field($model, 'select')->widget(ChosenSelect::class, [
     'items' => [
         'first' => 'First',
         'second' => 'Second'
